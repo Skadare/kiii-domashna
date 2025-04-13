@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("skadare/kiii-jenkins")
+       app = docker.build("skadare/kiii-domashna")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
